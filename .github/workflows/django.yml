@@ -58,7 +58,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: Siroj003
           password: ${{ secrets.MY_GITHUB_TOKEN }}
 
   notify:
