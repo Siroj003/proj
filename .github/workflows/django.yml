@@ -54,6 +54,13 @@ jobs:
           docker build -t siroj9656/django-app1:latest .
           docker push siroj9656/django-app1:latest
 
+      - name : Login to Github Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: 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
+
   #notify:
     runs-on: ubuntu-latest
     needs: [docker]
