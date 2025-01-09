@@ -34,35 +34,4 @@ jobs:
           source venv/bin/activate
           pip install -r crudproject/requirements.txt
 
-  docker:
-    runs-on: ubuntu-latest
-    needs: [build]
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # Set up Docker
-      - name: Log in to DockerHub
-        uses: docker/login-action@v2
-        with:
-          username: siroj9656
-          password: Siroj123@
-
-      - name: Build and push Docker image
-        run: |
-          docker build -t siroj9656/django-app1:latest .
-          docker push siroj9656/django-app1:latest
-
-      - name: send telegram message on push
-        uses: appleboy/telegram-action@master
-        with:
-          to: 7909461805
-          token: AAFAxYokBI7yl6NRXcmDSdu8HHfAX7moFn0
-          message: |
-            ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
-          
-            Repository: ${{ github.repository }}
-          
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+#
