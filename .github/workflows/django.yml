@@ -63,12 +63,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.MY_GITHUB_TOKEN }}
       
-      - name: Build and push Docker image to GHCR using Buildx
+      - name: Build and push Docker image to GHCR
         run: |
-            docker buildx build --platform linux/amd64,linux/arm64 \
-              -t ghcr.io/siroj003/proj/django-app1:latest . \
-              --push
-  
+            docker buildx build -t ghcr.io/siroj003/proj/django-app1:latest . --push
+    
   notify:
     runs-on: ubuntu-latest
     needs: [docker]
