@@ -55,20 +55,20 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USERNAME }}/django-app1:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/django-app1:latest
 
-  notify:
-    runs-on: ubuntu-latest
-    needs: [docker]
-
-    steps:
-      - name: send telegram message on push
-        uses: appleboy/telegram-action@master
-        with:
-          to: 7405961898
-          token: AAH73WZ0kSKP9lUYEo48PQxOVb_BR79jdHw
-          message: |
-           ${{ github.actor }} created commit:
-           Commit message: Hello World
-         
-           Repository: ${{ github.repository }}
-        
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+ # notify:
+#    runs-on: ubuntu-latest
+#    needs: [docker]
+#
+#    steps:
+#      - name: send telegram message on push
+#        uses: appleboy/telegram-action@master
+#        with:
+#          to: 7405961898
+#          token: AAH73WZ0kSKP9lUYEo48PQxOVb_BR79jdHw
+#          message: |
+#           ${{ github.actor }} created commit:
+#           Commit message: Hello World
+#         
+#           Repository: ${{ github.repository }}
+#        
+#            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
