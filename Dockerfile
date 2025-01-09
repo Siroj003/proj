@@ -5,7 +5,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY requirements.txt /crudproject/
+COPY /crudproject/requirements.txt /
 
 # Install dependencies
 RUN pip install --upgrade pip
