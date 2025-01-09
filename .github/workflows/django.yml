@@ -63,10 +63,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.MY_GITHUB_TOKEN }}
       
-#      - name: Build and push Docker image to GHCR 
-#        run: |
-#          docker build -t ghcr.io/${{ github.repository }}/django-app1:latest .
-#          docker push ghcr.io/${{ github.repository }}/django-app1:latest
+      - name: Build and push Docker image to GHCR 
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}/django-app1:latest .
+          docker push ghcr.io/${{ github.repository }}/django-app1:latest
 
 
   notify:
