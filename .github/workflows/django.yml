@@ -52,14 +52,14 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t siroj9656/django-app1:latest .
-          docker push siroj9656/django-app1:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/django-app1:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/django-app1:latest
 
       - name : Login to Github Container Registry
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: Siroj003
+          username: ${{ github.actor }}
           password: ${{ secrets.MY_GITHUB_TOKEN }}
 
   notify:
