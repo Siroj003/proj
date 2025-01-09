@@ -61,7 +61,7 @@ jobs:
 #          username: Siroj003
 #          password: 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
 
-  notify:
+# notify:
     runs-on: ubuntu-latest
     needs: [docker]
 
