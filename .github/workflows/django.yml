@@ -78,7 +78,7 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: -1002455999995
-          token: 7198702423:AAFrDqMlsKVoFZmaTU1RxRDeJOns8LJ6rP4
+          token: 7909461805:AAFAxYokBI7yl6NRXcmDSdu8HHfAX7moFn0
           message: |
            ${{ github.actor }} created commit:
            Commit message: Hello World
