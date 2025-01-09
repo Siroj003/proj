@@ -73,7 +73,7 @@ jobs:
           token: AAH73WZ0kSKP9lUYEo48PQxOVb_BR79jdHw
           message: |
             ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
+            Commit message: Hello World
           
             Repository: ${{ github.repository }}
           
