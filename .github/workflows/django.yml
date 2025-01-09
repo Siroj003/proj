@@ -61,7 +61,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: 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
+          password: Siroj123@
     
     
       - name: Build and push to GHCR
