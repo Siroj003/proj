@@ -65,9 +65,8 @@ jobs:
       
       - name: Build and push Docker image to GHCR 
         run: |
-          docker build -t ghcr.io/${{ github.repository }}/django-app1:latest .
-          docker push ghcr.io/${{ github.repository }}/django-app1:latest
-
+          docker build -t ghcr.io/siroj003/proj/django-app1:latest
+          docker push ghcr.io/siroj003/proj/django-app1:latest
 
   notify:
     runs-on: ubuntu-latest
