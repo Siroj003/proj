@@ -55,7 +55,7 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USERNAME }}/django-app1:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/django-app1:latest
 
- notify:
+  notify:
     runs-on: ubuntu-latest
     needs: [docker]
 
